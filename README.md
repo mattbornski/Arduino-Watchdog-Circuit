@@ -16,15 +16,16 @@ If the heartbeat signal is not sent within approximately 120 seconds of the last
 
 Circuit diagram
 ---------------
-https://raw.github.com/mattbornski/Arduino-Watchdog-Circuit/master/arduino-555-watchdog-circuit.png
-https://www.circuitlab.com/circuit/cc9d7s/arduino-555-watchdog-circuit/
+
+* https://raw.github.com/mattbornski/Arduino-Watchdog-Circuit/master/arduino-555-watchdog-circuit.png
+* https://www.circuitlab.com/circuit/cc9d7s/arduino-555-watchdog-circuit/
 
 Theory of operation
 -------------------
 
 See also:
-http://pcbheaven.com/wikipages/555_Theory/
-http://www.playwitharduino.com/?p=291
+* http://pcbheaven.com/wikipages/555_Theory/
+* http://www.playwitharduino.com/?p=291
 
 The Arduino's reset pin is active low; therefore, in order to trigger a reset we will hold the pin low for a period of time.  The 555's output pin will be used for this purpose; it is connected to the Arduino's reset pin through a diode to ensure that no stray signals on the Arduino's reset line can cause unexpected interference in the 555.
 
@@ -37,6 +38,6 @@ The main components of this circuit are the 555 timer, C1, R1, and R2.  Changing
 Photos
 ------
 
-https://raw.github.com/mattbornski/Arduino-Watchdog-Circuit/master/2012-11-11_09-16-33_858.jpg
-https://raw.github.com/mattbornski/Arduino-Watchdog-Circuit/master/2012-11-11_09-17-13_167.jpg
-https://raw.github.com/mattbornski/Arduino-Watchdog-Circuit/master/2012-11-11_09-17-42_548.jpg
+* https://raw.github.com/mattbornski/Arduino-Watchdog-Circuit/master/2012-11-11_09-16-33_858.jpg
+* https://raw.github.com/mattbornski/Arduino-Watchdog-Circuit/master/2012-11-11_09-17-13_167.jpg
+* https://raw.github.com/mattbornski/Arduino-Watchdog-Circuit/master/2012-11-11_09-17-42_548.jpg
