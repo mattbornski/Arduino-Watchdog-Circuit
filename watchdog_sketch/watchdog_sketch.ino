@@ -3,8 +3,11 @@ unsigned long lastHeartbeat = 0;
 unsigned long lastUptimeReport = 0;
 
 void heartbeat() {
+  // Sink current to drain charge from watchdog circuit
   pinMode(pulsePin, OUTPUT);
+  digitalWrite(pulsePin, LOW);
   delay(300);
+  // Return to high-Z
   pinMode(pulsePin, INPUT);
   lastHeartbeat = millis();
   Serial.println("Heartbeat sent");
@@ -13,10 +16,7 @@ void heartbeat() {
 // the setup routine runs once when you press reset:
 void setup() {
   // initialize serial communication at 9600 bits per second:
-  Serial.begin(9600);
-  // make the pulse pin an input for high impedance
-  pinMode(pulsePin, INPUT);
-  
+  Serial.begin(9600);  
   Serial.println("Arduino reset");
   
   // Send an initial heartbeat.
